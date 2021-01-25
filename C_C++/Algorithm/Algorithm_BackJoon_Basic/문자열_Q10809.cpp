@@ -14,7 +14,7 @@ int main() {
 	char str[101] = { 0, }; // 입력 받을 문자열, nul로 초기화.
 	int i = 0; // str index 검사용.
 
-	memset(result, -1, 26); // alphabet 배열 -1로 초기화.
+	memset(result, -1, 26); // result 배열 -1로 초기화.
 
 
 	for (int i = 0; i < 26; ++i) {
@@ -30,7 +30,7 @@ int main() {
 				if (result[j] == -1) { // 최초 발견인지 검사.
 					result[j] = i;
 				}
-				break; // 같지 않거나, 최초 발견이 아닐 시에 빠져나옴.
+				break; // 같은 알파벳이 발견되면 빠져나옴.
 			}
 			
 		}
