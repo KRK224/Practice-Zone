@@ -6,13 +6,7 @@
 #include <cstdlib>
 
 int main() {
-
-	int num;
-	char** pstr;
-
-	scanf("%d", &num);
-
-	pstr = (char**)calloc(sizeof(char*) * num);
+	
 
 	return 0;
 }
