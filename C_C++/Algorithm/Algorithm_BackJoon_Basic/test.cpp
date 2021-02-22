@@ -1,22 +1,32 @@
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
+#include <string>
+#include <vector>
 
-#include <cstdio>
-#include <cstdlib>
-#include <cstring> // streln Çì´õ
+using namespace std;
 
-int main() {
-	int answer = 0, num;
-	int mod = 0;
+void dfs_reculsive(int i, vector<int> nums, int result, int* answer) {
+    if (i == nums.size() - 1) {
+        if (result + nums[i] == 0) {
+            (*answer) = *answer + 1;
+        }
+        else if (result - nums[i] == 0) {
+            (*answer) = *answer + 1;
+        }
 
-	scanf("%d", &num);
-	while (num != 0) {
-		mod = num % 10;
-		num /= 10;
-		answer += mod;
-		
-	}
-	printf("%d", answer);
-	return answer;
+        return;
+    }
+
+
+    dfs_reculsive(i + 1, nums, result + nums[i], answer);
+    dfs_reculsive(i + 1, nums, result - nums[i], answer);
+}
+
+int solution(vector<int> numbers) {
+    int answer = 0;
+    int i = 0, result = 0;
+
+    dfs_reculsive(i, numbers, result, &answer);
+
+
+
+    return answer;
 }
