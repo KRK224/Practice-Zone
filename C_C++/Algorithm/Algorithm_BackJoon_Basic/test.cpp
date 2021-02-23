@@ -1,5 +1,10 @@
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include <string>
 #include <vector>
+#include <cstdio>
 
 using namespace std;
 
@@ -29,4 +34,17 @@ int solution(vector<int> numbers) {
 
 
     return answer;
+}
+
+int main() {
+    vector<int> numbers;
+    int a =0;
+
+    
+    while (a != -1) {
+        scanf("%d", &a);
+        numbers.push(a);
+    }
+    
+    return 0;
 }
