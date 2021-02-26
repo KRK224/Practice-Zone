@@ -3,7 +3,7 @@
 #endif
 
 #include <iostream>
-#include <cstdio	>
+#include <cstdio>
 #include <cstdlib>
 using namespace std;
 /*
@@ -62,6 +62,7 @@ int main() {
 
 	// 문자 입력 후, 정수를 입력받으면 마찬가지로 \n 영향 없음.
 
+
 	// Case 4.
 
 	/*scanf("%99s", arry);
@@ -70,6 +71,7 @@ int main() {
 	printf("입력받은 문자열: %s, 입력받은 문자: %c\n", arry, a);*/
 
 	// 마찬가지로, 문자열 다음은 \n 문자가 char 형에 입력됨.
+
 
 	// Case 5. 
 
@@ -89,6 +91,8 @@ int main() {
 	printf("%s\n", arry);*/
 
 	// a-z 가 아닌 것들이 다 EoT로 작용하여 문자열 끝에 \0이 잘 들어가는 것을 알 수 있다.
+
+
 
 	// Case 7. 문자열 EoT는 다음 입력 때 버퍼에 남아있는가?
 
