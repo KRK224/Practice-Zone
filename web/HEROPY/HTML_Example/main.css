@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*브라우저별 마진 패딩 설정 초기화*/
+}
+
+.header {
+    /* 
+
+    기본적으로 설정된 사이즈가 존재.
+    width: auto; // auto가 default를 의미함.
+    height: auto;
+
+    <div> 
+    width: 100%; // block 레벨 알지?
+    height: auto; // 들어있는 값에 따라 자동으로 늘어남.
+    
+    */
+    
+
+    background: yellowgreen;
+    
+}
+
+.container {
+    width: 980px;
+    margin: auto;
+    background: tomato;
+}
+
+.container-left {
+
+}
+
+.logo {
+
+}
+
+.menu {
+
+}

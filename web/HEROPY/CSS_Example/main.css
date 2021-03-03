@@ -6,6 +6,7 @@
     color: blue;
 }
 
+/*
 div {
     width: 200px;
     height: 150px;
@@ -26,15 +27,19 @@ div {
     padding-left: 10px;
 
 }
+*/
 
-.box {
-    width: 300px;
-    height: 200px;
+.box1 {
+    width: 200px;
+    height: 150px;
     background: red;
-    margin: 10px;
+    color: blue;
+    
 }
 
 .box2 {
-    padding: 20px;
-    border: 3px solid black;
+    width: 250px;
+    height: 180px;
+    background-color: yellowgreen;
+    color: white;
 }
