@@ -1,22 +1,40 @@
-div {
-    color: red;
-    width: 300px;
-    height: 200px;
-    background:red;
-}
-
 .title {
-    color:yellowgreen;
+    color: yellowgreen;
 }
 
-.main-text{
-    color:blue;
+.main-text {
+    color: blue;
 }
 
-.box {
+div {
     width: 200px;
     height: 150px;
     border: solid 1px black;
     background: blue;
     
+    margin: 20;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    background: red;
+    margin: 10px;
+}
+
+.box2 {
+    padding: 20px;
+    border: 3px solid black;
 }
