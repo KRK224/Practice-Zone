@@ -1,0 +1,27 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+span {
+    background: red;
+    height: 30px; /*반응하지 않는다.*/
+    width: 100px; /*반응하지 않는다.*/
+    margin: 20px; /*위 아래에 적용 불가*/
+    padding: 20px; /*위 아래에 적용 불가*/
+
+}
+
+div {
+    background: greenyellow;
+    height: 30px;
+    width: 100px;
+
+    /*block 요소는 크기 설정 가능.*/    
+
+    margin: 20px;   /*속기 속성: 사방을 저장*/
+    padding: 20px;  /*속기 속성: 사방을 저장*/
+    
+}
+
+/**/
