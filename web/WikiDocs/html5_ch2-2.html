@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 기본구조</title>
+</head>
+
+<body>
+    <h1>HTML 기본 태그 시작.</h1>
+    <hr>
+
+    <p>start/end tag & empty tag</p>
+
+    <br>
+
+    <h2> 2-2-2. HTML Paragraphs </h2>
+    <p>p tag는 문단을 의미 (자동 line break)
+        <br> br tag는 empty tag로서 line break 용도로 사용. <b>의미적으로 p tag가 더 중요!!(paragraphs의 의미)</b>
+        <br> hr tag는 empty tag로서 수평선 입력.
+        <hr>
+    </p>
+
+    <p>pre tag란?
+        <br> Preformatted Text를 의미한다.
+        <br> 탭(tab), 스페이스(space), 엔터(enter)를 입력 형태 그대로 인식하게 함.
+        <pre>
+            탭 입력 : tag   &   tag
+            
+            엔터 입력 : 
+            tag
+            &
+            tag
+
+            스페이스 입력 : 이건 별 차이 없잖아....
+
+            <hr>
+            ps. pre tag도 자동으로 line break 해줌.
+            
+        </pre>
+
+    </p>
+
+    <h2>2-2-3. HTML Text Formatting</h2>
+    <p>
+        <p>
+            <b>b tag: Bold의 약자로, 텍스트를 굵게 표시한다. (inline level tag)</b>
+            <br>
+            <strong>strong tag: b tag와 비슷하게 텍스트를 굵게 표시하지만, 의미적으로 더 중요함을 의미. (inline level tag)</strong>
+            <br>
+        </p>
+
+
+        <p>
+            <i>i tag: italic의 약자로, 텍스트를 이태릭으로 표시</i>
+            <em>em tag: emphasize의 약자로, 텍스트를 이태릭으로 표시하는 i tag와 동일하지만, 의미적으로 중요함을 의미.</em>
+        </p>
+
+        <p>
+            <small>small tag: 텍스트를 작게 표시.</small>
+        </p>
+
+        <p>
+            sup tag: <sup>super subscript의 약자로, 윗 첨자를 넣을 때 사용.</sup>
+            sub tag: <sub>subscript의 약자로, 아랫 첨자를 넣을 때 사용.</sub>
+        </p>
+
+        <p>
+            오늘은 4/18일 <del>토요일</del> <mark><ins>일요일</ins></mark>입니다.
+            <br> del tag: delete의 약자로, 텍스트를 삭제했다는 의미로 취소선 삽입
+            <br> ins tag: insert의 약자로, 텍스트를 삽입, 밑줄 표시.
+            <br> mark tag: 형광펜 강조할 때 사용.
+        </p>
+    </p>
+
+    <h2>2-2-4. HTML Quotation/Comment</h2>
+    <hr>
+    <p>
+        q tag와 blockquote tag.
+        <hr>
+
+        <q>q tag: quote의 약자이며, 짧은 문장을 인용할 때 쓰이는 태그. 브라우저에서는 "로 표시</q>
+        <br>
+        <q>blockquote tag는 긴 문장을 인용할 때 쓰이는 태그, 브라우저에서는 들여쓰기로 표시된다. </q>
+
+        <blockquote cite="https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C">
+            HTML 요소(HTML 엘리먼트, HTML element)는 HTML 문서나 웹 페이지를 이루는 개별적인 요소를 의미하며, 문서 객체 모델(DOM)으로 파싱된다. 
+            HTML은 트리나 HTML 노드(텍스트 노드 등)로 구성된다. 각 노드는 HTML 속성을 지정할 수 있다. 
+            노드들은 기타 노드와 텍스트를 포함한 콘텐츠도 소유할 수 있다.
+            
+            <br> <strong>ps. block level 태그</strong>
+        </blockquote>
+
+        <h2>HTML &lt;abbr&gt; Tag </h2>
+
+        <p>
+            <code>&lt;abbr&gt;&lt;/abbr&gt;</code> Tag는 abbreviation의 약자이며,
+            밑줄이 그어진 축약 텍스트에 마우스를 올리면 그 뜻이 말풍선처럼 표시된다.
+            <br> title 속성으로 말풍선을 작성 <br>
+            <abbr title ="Hyper Text Markup Language">HTML</abbr> & <abbr title="Cascading Style Sheets">CSS</abbr>
+        </p>
+
+        <h2>HTML Comment Tag</h2>
+
+
+        <p>
+            주석 처리를 위한 부분으로 &lt;!-- 내용내용 --&gt; 으로 작성하면, 내용내용이 보이지 않는다. <br>
+            <code>
+                <!--이렇게 작성하면 나오나?-->
+                안나옴.
+            </code>
+
+        </p>
+        
+
+    </p>
+        
+
+
+</body>
+
+</html>
