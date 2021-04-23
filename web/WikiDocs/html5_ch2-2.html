@@ -53,6 +53,7 @@
 
         <p>
             <i>i tag: italic의 약자로, 텍스트를 이태릭으로 표시</i>
+            <br>
             <em>em tag: emphasize의 약자로, 텍스트를 이태릭으로 표시하는 i tag와 동일하지만, 의미적으로 중요함을 의미.</em>
         </p>
 
@@ -84,10 +85,10 @@
         <q>blockquote tag는 긴 문장을 인용할 때 쓰이는 태그, 브라우저에서는 들여쓰기로 표시된다. </q>
 
         <blockquote cite="https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C">
-            HTML 요소(HTML 엘리먼트, HTML element)는 HTML 문서나 웹 페이지를 이루는 개별적인 요소를 의미하며, 문서 객체 모델(DOM)으로 파싱된다. 
-            HTML은 트리나 HTML 노드(텍스트 노드 등)로 구성된다. 각 노드는 HTML 속성을 지정할 수 있다. 
+            HTML 요소(HTML 엘리먼트, HTML element)는 HTML 문서나 웹 페이지를 이루는 개별적인 요소를 의미하며, 문서 객체 모델(DOM)으로 파싱된다.
+            HTML은 트리나 HTML 노드(텍스트 노드 등)로 구성된다. 각 노드는 HTML 속성을 지정할 수 있다.
             노드들은 기타 노드와 텍스트를 포함한 콘텐츠도 소유할 수 있다.
-            
+
             <br> <strong>ps. block level 태그</strong>
         </blockquote>
 
@@ -97,26 +98,116 @@
             <code>&lt;abbr&gt;&lt;/abbr&gt;</code> Tag는 abbreviation의 약자이며,
             밑줄이 그어진 축약 텍스트에 마우스를 올리면 그 뜻이 말풍선처럼 표시된다.
             <br> title 속성으로 말풍선을 작성 <br>
-            <abbr title ="Hyper Text Markup Language">HTML</abbr> & <abbr title="Cascading Style Sheets">CSS</abbr>
+            <abbr title="Hyper Text Markup Language">HTML</abbr> & <abbr title="Cascading Style Sheets">CSS</abbr>
         </p>
 
         <h2>HTML Comment Tag</h2>
 
 
         <p>
-            주석 처리를 위한 부분으로 &lt;!-- 내용내용 --&gt; 으로 작성하면, 내용내용이 보이지 않는다. <br>
+            주석 처리를 위한 부분으로 &lt;!-- '내용내용' --&gt; 으로 작성하면, '내용내용'이 보이지 않는다. <br>
             <code>
                 <!--이렇게 작성하면 나오나?-->
                 안나옴.
             </code>
 
         </p>
-        
+
+        <h2>2-2-5 Html Links</h2>
+
+        <p>
+            <a href = "https://wikidocs.net/">위키독스</a>
+            <br>
+            &lt; a &gt;: anchor의 약자이며 하이퍼링크를 의미한다.
+            <br>
+            <p>
+                <h3>기본 속성 (필수 속성)</h3>
+                <br>
+                href 속성의 값 = 연결할 URL, content = 브라우저에 표시될 텍스트.
+
+                <h3>선택 속성</h3>
+                target attribute <br>
+                링크가 열릴 때의 탭의 위치를 정의할 때 사용.
+
+                <br>target = "_self" : 디폴트 값으로 현재 창에서 탭 생성.
+                <br>target = "_blank" : 현재 창이 아닌, 새로운 창에서 탭 생성.
+                <br>target = "_parent" : 현재 보다 상위 프레임에서 해당 주소 문서를 연다..?? (무슨 소리인지...)
+                <br>target = "_top" : Root 프레임에서 해당 주소 문서.
+                <br>
+                <a href = "https://wikidocs.net/" target = "_blank">위키독스 _blank</a> <br>
+                <a href = "https://wikidocs.net/" target = "_parent">위키독스 _parent</a> <br>
+                <a href = "https://wikidocs.net/" target = "_top">위키독스 _top</a> <br>
+
+                <h3>Link State</h3>
+
+                Html link(a tag)는 4가지 상태로 정의할 수 있다. <br>
+
+                link : 한번도 방문하지 않은 상태 (디폴트); 파란색 <br>
+                visited: 한번이라도 방문한 상태; 보라색 <br>
+                active: 링크를 마우스로 누른 상태; 빨간색 <br>
+                hover: 링크 위에 마우스를 올려놓은 상태; CSS3로 사용자가 설정 가능 <br>
+
+                <strong> CSS3를 사용하여 기본적인 밑줄 및 색상 변경 가능.</strong> <br>
+
+                <h3>HTML Link를 사용한 Bookmark 만들기</h3>
+
+                <h4>id 사용법</h4>
+                <code>
+                    &lt;a href = "#article"&gt;id로 기사보러가기&lt;a&gt;
+                    <br>
+                    &lt;h1 id = "article"&gt;topic &lt;/h1&gt;
+                    <br>
+                    id로 bookmark 생성시에 목표 tag 안에 id를 찾아 link.
+                    
+                </code>
+
+                <h4>name 사용법</h4>
+                <code>
+                    &lt;a href = "#article"&gt;이름으로 기사보러가기&lt;a&gt;
+                    <br>
+                    &lt;a name = "article"&gt; &lt;/a&gt;
+                    <br>
+                    name으로 bookmark 생성 시에 a 태그를 쌍으로 만들어서 link.
+                </code>
+
+                <h4>예제 코드</h4>
+
+                <a href = "#html">id로 html 찾기</a>
+                <br>
+                <a name= "link">name으로 callback.</a>
+
+                <h5>문단1</h5>
+                <p>
+                    문단1의 내용.
+                </p>
+
+                <h5>문단2</h5>
+                <p>
+                    문단2의 내용.
+                </p>
+
+                <h5 id = "html">html</h5>
+                <p>
+                    html link 문단.
+                </p>
+
+                <a href = "#link">name으로 link</a>
+
+            </p>
+
+
+            <h2>2-2-6. HTML Image</h2>
+
+            <p>
+                
+            </p>
+            
+
+        </p>
+
+
 
     </p>
-        
-
-
 </body>
 
 </html>
