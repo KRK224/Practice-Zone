@@ -167,7 +167,7 @@
                     <br>
                     &lt;a name = "article"&gt; &lt;/a&gt;
                     <br>
-                    name으로 bookmark 생성 시에 a 태그를 쌍으로 만들어서 link.
+                    name으로 bookmark 생성 시에 <mark>a 태그를 쌍</mark>으로 만들어서 link.
                 </code>
 
                 <h4>예제 코드</h4>
@@ -199,7 +199,42 @@
             <h2>2-2-6. HTML Image</h2>
 
             <p>
+                &lt;img&gt; tag: image의 약어이며, <mark>End Tag가 없는 Empty tag</mark>.
+
+                <h3 style = "color:darkblue">사용법</h3>
                 
+                <code>
+                    &lt;img src = "url" alt = "대체 텍스트"&gt; <br>
+                    <code>src</code>: source의 약자로, 이미지가 있는 URL 주소를 입력.<br>
+                    <code>alt</code>: alternative의 약자로, URL 주소가 틀리거나 이미지를 불러올 수 없을 때 대체로 보여줄 텍스트.
+                </code>
+
+                <h3>절대 경로 vs 상대 경로</h3>
+                
+                <ul>
+                    <li>절대 경로: 웹페이지나 파일이 가지는 고유 경로, 최상위 디렉토리를 포함한 주소</li>
+                    <li>상대 경로: 현재 위치를 기준으로 해당 파일이 어디 있는지 표현</li>
+                        <ul>
+                            <li>/ : 최상위 디렉토리로 이동한다.</li>
+                            <li>./ : 현재 위치를 의미</li>
+                            <li>../ : 바로 위의 상위 디렉토리로 이동.</li>
+                        </ul>
+
+                </ul>
+
+                <h3>width속성, height속성</h3>
+                
+                <h4 style = "color:blue">사용법</h4>
+
+                <code>&lt;img src="url" alt="대체 텍스트" width="숫자" height="숫자"&gt;</code> <br>
+            
+                <h4 style = "color:blue">예시</h4>
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMTdfMjIz%2FMDAxNTQ1MDI1MTQwMDYy.aK7FI6-4Pu8nmPzXrCLLTJ471S-R0V4lkVF1XJBoh8wg.oU9I5Yx59Ep1uEfh1hmXDpiB2Qz-1IVAo6h5mRFbkc0g.PNG.wdb10004%2F1919.png&type=b400" 
+                alt="HTML 이미지" width="100" height="100">
+
+
+
+
             </p>
             
 
