@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 공간 배치</title>
+    <style>
+        span{
+            background-color:rgba(0, 0, 0, .05);
+            color:rosybrown;
+        }
+        code{
+            background-color:rgba(0, 0, 0, .05);
+            
+        }
+        #li_inline{
+            display:inline;
+            margin:5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>02장-3.1 HTML block&inline</h1>
+    <hr>
+    <p>
+        앞서 배웠던 모든 <strong>HTMl tag</strong>들은 두 가지 형태의 속성을 가지고 웹브라우저에 출력됩니다.
+
+        <ul>
+            <li>블록(block) 형태</li>    
+            <li>인라인(inline) 형태</li>
+        </ul>
+    </p>
+    <h2>블록(block)형태</h2>
+    <hr>
+    <p>
+        블록(block) 형태의 속성을 가진 Tag들은 말 그대로 네모 블록(block) 모양을 가집니다.
+        항상 새로운 줄에서 시작하며, 해당 줄의 모든 너비를 차지합니다
+       
+    </p>
+    <h3> &lt;div> Tag</h3>
+    <p>
+        블록(block) 형태의 속성을 가진 가장 대표적인 Tag로서
+        <ul>
+            <li>다른 HTML Tag들을 하나로 묶는 데 자주 사용합니다</li>
+            <li>하나로 묶인 다른 HTML Tag에 CSS 스타일을 한번에 적용하는데 자주 사용합니다.</li>
+        </ul>
+
+        <h4 style="color:blue">예시</h4>
+        <p>
+            <code style="background-color:rgba(0, 0, 0, .05)">
+                <pre>
+                    &lt;div style="border:1px solid black;"&gt;
+                        &lt;h1 style="text-align:center"&gt;HTML5 & CSS3&lt;/h1&gt;
+                        &lt;p&gt;HTML5와 CSS3를 공부하자&lt;/p&gt;
+                </pre>
+            </code>
+
+            <ul style="list-style-type:square">
+                <li><span style="background-color:rgba(0, 0, 0, .05); color:salmon">&lt;div&gt;~&lt;/div&gt;</span>: 다른 HTML Tag들을 하나로 묶어줌</li>
+                <li>Tag 안에 style 속성을 주었다.</li>
+                <li><span>border</span> 속성: 두께가 1px인 검은색 실선 테두리를 그려줌</li>
+                <li><span>text-align</span>속성 : 텍스트를 중앙 정렬합니다.</li>
+            </ul>
+
+        </p>
+        <h4 style="color:blue">결과</h4>
+        <p>
+            <div style="border: 1px solid black;">
+                <h1 style="text-align:center">HTML5 & CSS3</h1>
+                <p>HTML5와 CSS3를 공부하자</p>
+            </div>
+        </p>
+
+        <p>
+            <strong>결과에서 보듯이, &lt;div&gt; Tag는 다른 HTML Tag들을 감싸며 블록(block)형태를 가집니다.</strong>
+        </p>
+
+        <h4>블록(block) 형태의 대표적인 Tags</h4>
+        <div style="border:1px solid black">
+            <ul style="list-style-type:none; display:inline; margin:5px;">
+                <li id="li_inline">div</li>
+                <li id="li_inline">p</li>
+                <li id="li_inline">ol</li>
+                <li id="li_inline">ul</li>
+                <li id="li_inline">li</li>
+                <li id="li_inline">h#</li>
+                <li id="li_inline">pre</li>
+                <li id="li_inline">blockquote</li>
+                <li id="li_inline">form</li>
+                <li id="li_inline">table</li>
+                <li id="li_inline">header</li>
+                <br>
+                <br>
+                <li id="li_inline">nav</li>
+                <li id="li_inline">section</li>
+                <li id="li_inline">article</li>
+                <li id="li_inline">aside</li>
+                <li id="li_inline">footer</li>
+                <li id="li_inline">video</li>
+                <li id="li_inline">dl</li>
+                <li id="li_inline">dt</li>
+                <li id="li_inline">dd</li>
+                <li id="li_inline">noscript</li>
+            </ul>
+        </div>
+
+    </p>
+
+    <br>
+    <h2>인라인(inline) 형태</h2>
+    <hr>
+    <p>
+        인라인(inline) 형태의 속성을 가진 Tag들은 새로운 줄에서 시작하지 않으며, 해당 줄의 너비는 <mark>내용</mark>만큼만 가집니다.
+
+    </p>
+
+    <h3>&lt;span&gt; Tag</h3>
+    <p>
+        인라인(inline) 형태의 속성을 가진 가장 대표적인 Tag로서
+        <ul>
+            <li>텍스트의 특정부분을 강조하는데 자주 사용합니다.</li>
+            <li>텍스트의 특정부분에 CSS 스타일을 적용하기 위해 자주 사용합니다.</li>
+        </ul>
+    </p>
+
+    <h4 style="color:blue">예시</h4>
+
+    <code>
+        &lt;p&gt; 우리는 &lt;span style="color:red"&gt;HTML5 & CSS3&lt;/span&gt;를 공부하고 있습니다. &lt;/p&gt;
+    </code>
+    <ul>
+        <li><span>&lt;span&gt;~&lt;/span&gt;</span>: 텍스트에서 강조할 특정부분을 &lt;span&gt; Tag로 감싸주었습니다.</li>
+        <li>Tag 안에 style 속성을 주었습니다.</li>
+        <li><span>color</span> 속성: 텍스트의 색깔을 빨간색으로 지정</li>
+    </ul>
+
+    <h4 style="color:blue">결과</h4>
+    <p>
+        우리는 <span>HTML5 & CSS3</span>를 공부하고 있습니다.
+    </p>
+
+    <strong>결과에서 보듯이, &lt;span&gt; Tag는 인라인(inline)형태를 가지며 텍스트의 특정부분에 스타일을 지정하기 위해 사용합니다.</strong> <br>
+
+    <h4>인라인(inline) 형태의 대표적인 Tags</h4>
+    <div style="border:1px solid black">
+        <ul>
+            <li id="li_inline">span</li>
+            <li id="li_inline">a</li>
+            <li id="li_inline">q</li>            
+            <li id="li_inline">b</li>
+            <li id="li_inline">em</li>
+            <li id="li_inline">small</li>
+            <li id="li_inline">strong</li>
+            <li id="li_inline">sup</li>
+            <li id="li_inline">sub</li>
+            <li id="li_inline">input</li>
+            <li id="li_inline">img</li>
+            <br>
+            <br>
+            <li id="li_inline">br</li>
+            <li id="li_inline">big</li>
+            <li id="li_inline">select</li>
+            <li id="li_inline">i</li>
+            <li id="li_inline">button</li>
+            <li id="li_inline">code</li>
+            <li id="li_inline">textarea</li>
+            <li id="li_inline">map</li>
+            <li id="li_inline">mark</li>            
+            <li id="li_inline">script</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
