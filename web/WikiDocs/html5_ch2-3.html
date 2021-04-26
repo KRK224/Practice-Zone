@@ -4,15 +4,75 @@
     <meta charset="UTF-8">
     <title>HTML 공간 배치</title>
     <style>
-        span{
-            background-color:rgba(0, 0, 0, .05);
-            color:rosybrown;
+        header {
+            background-color: lightgrey;
+            height: 100px;
         }
-        code{
-            background-color:rgba(0, 0, 0, .05);
-            
+
+        nav {
+            background-color: lightgrey;
+            height: 50px;
         }
-        #li_inline{
+
+        #main {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            overflow: hidden;
+            border: 1px solid black;
+
+        }
+
+        section {
+            width: 50%;
+            background-color: lightgrey;
+            height: 150px;
+        }
+
+        article {
+            width: 60%;
+            margin-left: 100px;
+            background-color: yellow;
+            height: 100px;
+        }
+
+        aside {
+            float: right;
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 40%;
+            margin-left: 5px;
+            height: 600px;
+            background-color: lightgrey;
+            height: 150px;
+        }
+
+        footer {
+            background-color: lightgrey;
+            height: 100px;
+        }
+
+        header,
+        nav,
+        section,
+        article,
+        footer,
+        aside {
+            text-align: center;
+        }
+
+        span {
+            background-color: rgba(0, 0, 0, .05);
+            color: rosybrown;
+        }
+
+        code {
+            background-color: rgba(0, 0, 0, .05);
+
+        }
+
+        #li_inline {
             display:inline;
             margin:5px;
             
@@ -170,5 +230,103 @@
         </ul>
     </div>
     
+    <h1>02장-3.2 HTML iframe</h1>
+    <hr>
+
+    <p>
+        iframe: inline frame의 약자로, 웹 페이지 안에 새로운 웹페이지를 삽입할 때 사용한다.
+    </p>
+    <ol>
+        <li><a href="https://wikidocs.net/" target="frame">위키독스</a></li>
+        <li><a href="https://ko.wikipedia.org/wiki/HTML5" target="frame">위키백과 - HTML5</a></li>
+    </ol>
+    
+
+    <iframe src="https://wikidocs.net/" title="위키독스" width="50%" height="300px" name="frame"></iframe>
+
+    <h1>02장-3.3 HTML Semantic</h1>
+    <hr>
+
+    <p>
+        <b>HTML5</b>에서는 웹 페이지의 레이아웃만을 위한 별도의 새로운 Tag들을 제공합니다.
+        이 Tag들을 의미(Semantic) Tag라고 합니다.
+    </p>
+
+    <h2>의미(Semantic) Tag</h2>
+    <p>
+        의미(Semantic) Tag란 웹 브라우저나 개발자에게 <b>명확한 의미</b>를 전달 하는 Tag 입니다.
+        예를 들어 header Tag를 보면 의미적으로 헤더를 정의하고 웹 브라우저, 개발자에게 헤더 부분이라고 명시하는 역할을 합니다.
+        <b>하지만</b> 주의할 점은 <code>header</code> Tag를 쓴다고 해서 밑의 그림처럼 레이아웃을 만들어주지는 않습니다.
+        단지 의미를 부여할 뿐 레이아웃은 CSS3로 작업합니다.
+    </p>
+
+    <h2>HTML5에서 추가된 의미(Semantic) Tag</h2>
+
+    <ul>
+        <li>header : HTML 헤더나 section에 헤더를 정의함.</li>
+        <li>nav : HTML 메뉴바를 정의함.</li>
+        <li>main : HTML 전체 Content를 정의함.</li>
+        <li>section : HTML Section을 정의함.</li>
+        <li>article : HTML 하나의 글(article)을 정의함.</li>
+        <li>aside : 웹 페이지에서 배너나 추가적인 문구 등을 정의함.</li>
+        <li>footer : HTML Footer를 정의함.</li>
+    </ul>
+
+    <img src="https://wikidocs.net/images/page/86842/semantic2.PNG" alt="Semantic Tag 정의">
+    <br>
+
+    <h3 style="color:blue">예시</h3>
+
+    <header>
+        <h2>header 부분입니다.</h2>
+    </header>
+    <nav>
+        <h2>nav 부분입니다.</h2>
+    </nav>
+    <main>
+        <section>
+            <p>
+                section1 부분입니다.
+            </p>
+            <article>
+                <p>
+                    article1 부분입니다.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <p>
+                section2 부분입니다.
+            </p>
+            <article>
+                <p>article2 부분입니다.</p>
+            </article>
+        </section>
+
+        <aside>
+            <p>aside 부분입니다.</p>
+        </aside>
+    </main>
+    <footer>
+        <h2>footer 부분입니다.</h2>
+    </footer>
+
+    <h3 style="color:blue">결과</h3>
+    <p>
+        <strong>결과에서 보다시피 Semantic Tag가 레이아웃을 만들어 주지 않지만 웹 브라우저나 개발자에게 의미적으로 전달하는 기능을 이용한다
+            레이아웃을 주려면 CSS3를 이용한다.
+        </strong>
+    </p>
+
+    <h2>CSS3를 이용한 레이아웃 만들기</h2>
+    <p>
+        CSS3를 배우지는 않았지만 참고해서 보자. (위의 예시로 CSS3 스타일 적용.)
+    </p>
+
+    <h3 style="color:blue">예시</h3>
+
+
+
 </body>
 </html>
