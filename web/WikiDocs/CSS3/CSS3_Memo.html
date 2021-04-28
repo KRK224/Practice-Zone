@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiDocs_CSS3</title>
+    <style>
+
+        code {
+            background-color:#E2E2E2; 
+            color:red;
+            font-weight:bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>03장-1 선택자 (Selector)</h1>
+    <p>
+        <hr>
+        <h2>선택자(Selector)의 종류</h2>
+        <p>
+            <ul>
+                <li>단일 선택자</li>
+                    <ul>
+                        <li>Tag 선택자</li>
+                        <li>id 선택자</li>
+                        <li>class 선택자</li>
+                    </ul>
+                <li>그룹 선택자</li>
+            </ul>
+            더 이상 자세한 설명은 생략한다...
+            
+            <h3><strong>그룹 선택자 <span style="color:red">주의사항!</span></strong></h3>
+            <p>
+                쉼표와 공백의 차이점 <br>
+                쉼표 : 여러 선택자를 의미. <br>
+                공백 : 선택자 안의 특정 선택자를 의미.
+            </p>
+        </p>
+    </p>
+
+    <h1>03장-2 CSS3를 HTML5에 적용하기</h1>
+    <p>
+        <hr>
+        CSS3 HTML5에 적용하는 방법은 크게 <strong>3가지</strong>가 있다
+        <ul>
+            <li>인라인(inline) 스타일 시트 : HTML문서 내의 각 Tag 요소에 직접 스타일 시트를 정의한다. </li>
+            <li>내부(internal) 스타일 시트 : HTML문서의 <code>&lt;head&gt;</code>
+            부분에 스타일 시트를 정의한다.
+            </li>
+            <li>외부(external) 스타일 시트 : 스타일 시트를 별도의 파일(확장자 <code>.css</code>로 저장하여 다른 HTML문서에서도 같은 스타일 시트를 사용할 수 있도록 합니다.</li>
+
+            더 이상 자세한 설명은 생략한다.
+
+            <h2>외부(external) 스타일 시트</h2>
+            <p>
+                각각의 HTML문서의 <code>&lt;head&gt;</code> Tag 내에서 <code>&lt;link&gt;</code> Tag를 이용하여 선언. <br>
+                &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css 파일명&quot;&gt;
+            </p>
+
+        </ul>
+    </p>
+    <h1>03장-3 CSS 적용 우선 순위</h1>
+    <p>
+        <hr>
+        <ol>
+            <li> importance : 속성 값 뒤에 <strong>!important</strong>로 설정하면 다른 것들을 고려하지 않고 가장 우선적으로 고려한다. </li>
+            <li> specificity : 모든 설정이 같을 경우, 가장 나중에 선언한 것이 우선되어 적용됩니다. </li>
+                <ol type="a">
+                    <li>인라인(inline) 스타일 시트</li>
+                    <li>외부(external) 또는 내부(internal) 스타일 시트</li>
+                        <ul style="list-style-type:square">
+                            <li>id 선택자 > class 선택자 > Tag 선택자</li>
+                        </ul>
+                    <li> 브라우저 기본 값</li>
+
+                </ol>
+        </ol>
+
+        <a href="https://wikidocs.net/85455" target="_blank">WikiDocs_CSS3_적용우선순위</a>
+    </p>
+
+    <h1>03장-4 색깔(Color) 다루기</h1>
+    <hr>
+    <p>
+        
+    </p>
+    
+</body>
+</html>
