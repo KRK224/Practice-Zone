@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>nufyn 회사 설문조사</h1>
-    이름: <input type="text" name="이름" placeholder="이름을 반드시 입력해주세요" size="20"> <br><br>
-    주소: <input type="text" name="주소" value="대구 달서구..."> <br><br>
+    <form>
+
+    이름: <input type="text" name="이름" placeholder="이름을 반드시 입력해주세요" required> <br><br>
+    주소: <input type="text" name="주소" value="대구 달서구..." readonly> <br><br>
     회사: <input type="text" name="회사" value="nufyn 회사" disabled> <br><br>
     
     성별: <input type="radio" name="성별" value="남"> 남 <input type="radio" name="성별" value="여"> 여 <br><br>
@@ -23,11 +25,14 @@
         <option value="010">010</option>
         <option value="016">016</option>
         <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
     </select>
     <br><br>
     <textarea rows="20" cols="40" name="memo" placeholder="Memo"></textarea> <br><br>
 
     <input type="submit" name="submit"value="보내기">
 
+    </form>
 </body>
 </html>
