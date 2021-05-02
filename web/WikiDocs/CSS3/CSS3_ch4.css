@@ -1,0 +1,85 @@
+body {
+    background-color:rgb(231,224,192);
+}
+
+.title {
+    text-align:center;
+    font-size:15px;
+    font-family: "Lobster", cursive;
+}
+
+.nav {
+    position:relative;
+    border:2.5px solid black;
+}
+
+.nav div{
+    margin:10px 80px;
+}
+
+.nav div span {
+    font-size:15px;
+    width: 100px;
+    height:10px;
+    text-align:center;
+    border-right: 1px solid black;
+    margin-right:10px;
+    padding:0px 100px;
+}
+
+#input_txt {
+    max-width:800px;
+    width:80%;
+    height:40px;
+
+}
+
+main {
+    position:relative;
+}
+
+.content {
+    display:inline;
+    position:absolute;
+    margin:20px;
+}
+
+#fstLine {
+    font-weight:bold;
+    font-size:20px;
+    
+  
+}
+
+#sndLine {
+    font-weight:bold;
+    font-size:15px;
+}
+
+#indent {
+    margin-left:30px;
+    font-weight: normal;
+}
+
+audio {
+    width:200px;
+    position:absolute;
+    right:500px;
+}
+
+.footer {
+    margin-top:50px;
+    border-top:1px black solid;
+    position:relative;
+}
+
+.footer div {
+    display:inline;
+    position:absolute;
+    margin-left:30px;
+    font-weight:bold;
+    line-height:35px;
+    font-size:20px;
+    font-family: 'Nanum Brush Script', cursive;
+
+}

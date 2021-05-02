@@ -13,6 +13,41 @@
             font-weight:bold;
         }
 
+        .relative {
+            width:400px;
+            height:200px;
+            position:relative;
+            left:100px;
+            border:3px solid red;
+        }
+
+        .static {
+            width:400px;
+            height:200px;
+            left:100px;
+            border:3px solid red;
+        }
+        .absolute {
+            width:200px;
+            height:100px;
+            position:absolute;
+            top:80px;
+            right:0;
+            border: 3px solid black;
+        }
+
+        .fixed {
+            width:400px;
+            height:200px;
+            position:fixed;
+            bottom:0;
+            right:0;
+            border-top:3px double red;
+            border-right:4px groove blue;
+            border-bottom: 2px outset grey;
+            border-left:5px dotted green;
+        }
+
     </style>
 </head>
 <body>
@@ -82,11 +117,106 @@
         <a href="https://wikidocs.net/85455" target="_blank">WikiDocs_CSS3_적용우선순위</a>
     </p>
 
+
     <h1>03장-4 색깔(Color) 다루기</h1>
     <hr>
     <p>
-        CSS 공부 완.
-    </p>
+        <h2>배경색 지정</h2>
+        <ul>
+            <li>background-color: 색상명;</li>
+        </ul>
+        <br>
+        <h2>경계선 색상 지정</h2>
+        <ul>
+            <li>border: 1px solid 색상명;</li>
+        </ul>
+        <br>
+        <h2>글자 색상 지정</h2>
+        <ul>
+            <li>color: 색상명;</li>
+        </ul>
+        
+        <br>
+        <h2>색상 값 표기</h2>
+        <ul>
+            <li>color: 색상명</li>
+            <li>color: rgb(red255, green255,blue255);</li>
+            <li>color: #E2E2E2</li>
+            <li>color: rgba(red, green, blue, alpha)</li>
+        </ul>
+
+   </p>
+
+   <h1>03장-8 위치(Position) 다루기</h1>
+   <hr>
+   <p>
+        위치(position) 지정 속성의 종류는 크게 4가지가 있다.
+        <ul>
+            <li>static : 디폴트 값이며 코드 흐름에서 자신의 위치</li>
+            <li>relative : 원래 위치에서 상대적인 위치 지정</li>
+            <li>absolute : 자신을 감싸고 있는 Tag(<b>static일 경우 적용 안됨</b> body로 적용됨)에서 상대적인 위치 지정</li>
+            <li>fixed : 전체 보여지는 화면에서 고정된 위치</li>
+        </ul>
+
+        <h2>relative</h2>
+        <hr>
+        <ul>
+            <li>원래 위치에 대해 상대적으로 위치시킨다.</li>
+            <li>top, bottom, left, right 속성을 지정하여 원래 위치로부터 변경한다</li>
+            <li>다른 요소들에게 영향을 미치지 않는다</li>
+        </ul>
+        <h3 style="color:blue;">예시</h3>
+        <p>
+            <h4>position: relative</h4>
+            <div class = "relative">
+                <p>relative으로 위치 지정</p>
+            </div>
+        </p>
+
+        <h2>absolute</h2>
+        <hr>
+        <ol>
+            <li>바로 자신을 감싸는 Tag에 대해 상대적으로 위치를 설정한다</li>
+            <li>자신을 감싸는 Tag가 없을 경우 <code>&lt;body&gt;</code> Tag를 기준으로 한다</li>
+            <li><strong>단, 자신을 감싸는 Tag가 static 위치 속성을 가지면 해당하지 않는다</strong></li>
+        </ol>
+
+        <h3 style="color:blue">예시</h3>
+        <p>
+            <h4>position: absolute</h4>
+            <div class="relative">
+                <p>relative으로 위치 지정</p>
+                <div class="absolute">
+                    <p>absoulte으로 위치 지정</p>
+                </div>
+            </div>
+        </p>
+
+        <h3 style="color:blue">3번 예시</h3>
+        <strong style="font-size:large">자신을 감싸는 Tag가 static 속성을 가지고 있어 <code>&lt;body&gt;</code> Tag를 기준으로 한다</strong>
+
+        <p>
+            <h4>position: absolute_static</h4>
+            <div class="static">
+                <p>static으로 위치 지정</p>
+                <div class="absolute">
+                    <p>absoulte으로 위치 지정</p>
+                </div>
+            </div>
+        </p>
+        <h2>fixed</h2>
+        <hr>
+        <ul>
+            <li>페이지가 스크롤되더라도 항상 같은 영역에 머무른다.</li>
+            <li>top, bottom, left, right 속성을 이용하여 위치 설정</li>
+        </ul>
+
+        <h3 style="color:blue">예시</h3>
+        <h4>position: fixed</h4>
+        <div class="fixed">
+            <p>fixed으로 위치 지정</p>
+        </div>
+   </p>
     
 </body>
 </html>
