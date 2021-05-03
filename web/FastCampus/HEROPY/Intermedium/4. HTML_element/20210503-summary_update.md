@@ -1,4 +1,4 @@
-### HTML- 블록레벨(Block level) 요소(Elements)와 인라인(Inline) 요소(Elements)
+# HTML- 블록레벨(Block level) 요소(Elements)와 인라인(Inline) 요소(Elements)
 
     1. 블록 요소
         + DIV, H1, P
@@ -23,13 +23,13 @@
         - text용을 위한 용도.
 
 
-#### Display 속성
+## Display 속성
 
     각각의 요소의 속성을 변경할 수 있다. 
     초기값
     div, h1, p {display: block;} / span {display: inline;}
 
-#### 04. 주요범위 & 메타데이터
+## 04. 주요범위 & 메타데이터
 
     <html lang= "ko"> // lang 속성은 문서의 기본 언어를 설정.
     [ISO 639-1 코드 목록](https://ko.wikipedia.org/wiki/ISO_639-1_%EC%BD%94%EB%93%9C_%EB%AA%A9%EB%A1%9D)
@@ -53,7 +53,7 @@
     </html>
     
 
-#### ps. 모음
+## ps. 모음
 
     ##### 박스 모델
     ![Box model image](https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png)
@@ -82,5 +82,32 @@
         반응형 웹사이트를 제공하기 위한 메타. / 화면(viewport)의 렌더링을 위한 메타. 
 
         viewport, content = "width=device-width" : 기기의 가로 사이즈에 맞추어 출력
+
+## LINK tag 속성
+        <p>
+        LINK tag 속성 : href, rel(관계), type(MIME type)
+        </p>
+
+## FastCampus ch4-10. 메타데이터 - Base tag
+---
+    Base Tag의 기능은 상대 경로의 시작을 지정해준다.
+
+    e.g.
+    
+    <base href="./main/css/">
+
+    <link rel="stylesheet href="main.css"> => <link rel="stylesheet href="./main/css/main.css>
+    
+    와 동일!
+
+__단, 반드시 한번만 쓸 수 있고,__
+__*Base 주소를 입력할 때, 기본 href 값과 바로 붙기 때문에 '/'를 잊지 말고 붙여야한다.*__
+
+---
+
+
+
+
+
 
 
