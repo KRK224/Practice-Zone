@@ -16,7 +16,7 @@ function hello2(){
 
 // 문제 없슴!
 
-// example2.js
+// example2.js 변수도 가능한 Hoisting
 console.log("Hoisting Example2");
 
 age = 6;
@@ -27,7 +27,7 @@ var age = 5;
 
 //example3.js
 
-console.log('\nHoisting이 선언만을 가져온다는 것을 보여주는 예시')
+console.log('\n Hoisting이 선언만을 가져온다는 것을 보여주는 예시')
 
 console.log(name);
 
@@ -57,7 +57,7 @@ var name = "Chris";
 
 /* 
     아예 에러 처리됨 => Hoisting 문제 해결됨.
-    
+
     console.log('letName');
 
     letName = "KKR";

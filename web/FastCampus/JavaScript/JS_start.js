@@ -101,3 +101,20 @@ console.log(age); // 문제 없음
 
  함수 뿐만 아니라, 변수도 마찬가지.
 */
+
+/* 11장 시작 => 11.js 본 코드
+    let 변수는 따로 자료형을 선언하지 않는다. => 동적 타이핑 / dynamic typing.
+
+    변수가 가지는 고정 타입은 없다. 하지만 타입이 없는 것이 아니다.
+
+    1. 기본 타입
+            Boolean
+            Null
+            Undefined
+            Number
+            String
+            Symbol
+
+    2. 객체 타입
+
+*/
