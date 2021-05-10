@@ -166,3 +166,37 @@ console.log(message);
     }
 */
 
+
+/*
+    반복문 for/while은 C언어와 동일.
+*/
+
+//=======================================
+
+/*
+    for of vs for in
+    
+    for of 는 iterator 프로토콜 (배열 등)에서 사용
+
+        for (let a of 배열 이름){
+
+        }
+
+    for in 은 모든 프로퍼티에서 사용??
+
+    객체 안의 모든 프로퍼티가 나옴.
+*/
+
+
+for (let i of [1,2,3]){
+    console.log(i);
+}
+
+Object.prototype.test = function(){};
+
+for (const i in {a:1, b:2, c:3}){
+    console.log(i);
+}
+
+// 객체의 test가 출력됨!!
+
