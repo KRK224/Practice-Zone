@@ -11,14 +11,22 @@
 </head>
 <body>
     <h1><a href="20210505_ex3.html">WEB</a></h1>
-    <input type="button" value="night" onclick ="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').sytle.color='white';
+
+    <input id="night_day" type="button" value="night" onclick="
+    let target = document.querySelector('body');
+
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+
     ">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').sytle.color='black';
-    ">
+
     <nav>
         <ol>
             <li><a href="HTML5.html">HTML5</a></li>
