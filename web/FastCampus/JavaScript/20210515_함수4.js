@@ -24,7 +24,7 @@ const Cat = (name, age) => {
     this.age = age;
 }
 
-const c = new Cat('냥이', 1);
+const c = new Cat('냥이', 1); // error 발생!
 
 
 

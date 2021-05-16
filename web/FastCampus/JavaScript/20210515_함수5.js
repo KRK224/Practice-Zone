@@ -1,7 +1,7 @@
 //============================================================
 
 /*
-    함수 안에서 함수를 만들어 리턴.
+    객체 함수 안에서 함수를 만들어 리턴.
     함수를 호출하면 함수를 만들어서 리턴??
 */
 
@@ -11,7 +11,7 @@ function plus(base) {
     }
 }
 
-const plus5 = plus(5); // 현재 base 5가 들어간 function(num)이 plus5에 저장되어있다.
+const plus5 = plus(5); // 현재 base 5가 들어간 객체 function(num)이 plus5에 저장되어있다.
 
 console.log(plus5(10));
 

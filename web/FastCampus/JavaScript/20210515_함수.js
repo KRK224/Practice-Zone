@@ -28,6 +28,8 @@ function hello3(name){
 
 console.log(hello3("Mark"));
 
+//=================================================================================
+
 /*
     const hello = function(){}
 

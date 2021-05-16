@@ -22,7 +22,7 @@ hello3();
 var hello3 = function(){
     console.log("hello3 var로 선언 후 Hoisting test")
     // error : hello3 is not a function.
-    // 선언은 인식하나 함수로 할당됨은 인식하지 못함.
+    // var 선언은 인식하나 함수로 할당됨은 인식하지 못함.
 }
 */
 
@@ -36,7 +36,7 @@ var hello3 = function(){
 
 const sum = new Function('a', 'b', 'c', 'return a + b + c');
 
-console.log(sum(1,2,3,));
+console.log(sum(1,2,3));
 
 /* 
     **** 익명 function 과 new Function의 차이점.
@@ -51,7 +51,7 @@ global.a = 0;
 
     console.log(test()); // error: {} scope level의 a를 인식하지 못함.
 
-    //but global 변수는 인식하여 가져올 수 있음.
+    //but global 변수는 인식하여 가져올 수 있음. => 모든 객체 메소드는 global(window) 최상위 객체에 바인딩.
 }
 
 {
