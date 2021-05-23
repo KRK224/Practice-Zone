@@ -9,7 +9,7 @@ function c(callback) {
     },1000);
 }
 
-c(()=>{
+c(()=>{ // callback 함수가 아무것도 없는 상태로 실행.
     console.log("1000ms 후에 callback 함수가 실행됩니다.");
 })
 

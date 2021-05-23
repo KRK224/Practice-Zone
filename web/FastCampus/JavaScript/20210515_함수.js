@@ -23,7 +23,7 @@ function hello3(name){
     return `hello3 ${name}`;
     
     //${} template literal : 표현식 삽입(expression imterpolation)으로 읽기 쉬운 문자을을 만들 수 있다.
-    // 1 옆의 `문자 사용, + 사용하지 않고 변수와 문자열을 연결하여 문자열로 반환.
+    // 1 옆의 "`"문자 사용, "+"" 사용하지 않고 변수와 문자열을 연결하여 문자열로 반환.
 }
 
 console.log(hello3("Mark"));
@@ -33,7 +33,7 @@ console.log(hello3("Mark"));
 /*
     const hello = function(){}
 
-    함수 이름을 바로 명시하는 것이 아니라 function keyword를 사용해서 만듬.
+    함수 이름을 바로 명시하는 것이 아니라 function keyword를 사용해서 만든 후 변수에 할당
     function: 함수를 만들 때 사용하는 키워드
 
     => 함수 표현식(Function Expressions) / 익명 함수 사용이라고도 함.
