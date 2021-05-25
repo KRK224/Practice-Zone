@@ -51,8 +51,8 @@ global.a = 0;
 
     console.log(test()); // error: {} scope level의 a를 인식하지 못함.
 
-    //but global 변수는 인식하여 가져올 수 있음. => 모든 객체 메소드는 global(window) 최상위 객체에 바인딩.
-}
+    //but global 변수는 인식하여 가져올 수 있음. => ~~모든 객체 메소드는 global(window) 최상위 객체에 바인딩.~~
+}   // 모든 객체 매소드는 window 최상위 객체에 바인딩 된다는 것은 좀 더 알아볼 필요가 있다.
 
 {
 

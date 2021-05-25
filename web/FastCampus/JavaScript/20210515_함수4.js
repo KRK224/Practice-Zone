@@ -1,6 +1,6 @@
 // 생성자 함수를 이용하여 새로운 객체를 만드는 방법.
 
-//함수 객체를 만들기.
+//함수를 통한 생성자 만들기.
 function Person(name, age) {
     console.log(this);
     this.name = name; // 객체의 속성으로 인자를 저장.
