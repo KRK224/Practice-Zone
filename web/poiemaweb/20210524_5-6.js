@@ -45,7 +45,7 @@ for (var i = 0; i <str.length; i++){
     console.log(str[i]);
 }
 
-// 문자열을 변경할 수 없다.
+// 문자열을 변경할 수 없다.=> 원시 타입
 
 str[0] = "S";
 console.log(str); // Hello
@@ -80,6 +80,7 @@ console.log(str2); // STR
 
 /* 
     변수 선언시에 확보된 메모리 공간을 초기값으로 할당하지 않으면, javascript 엔진이 undefined로 초기화함.
+    선언하지 않은 변수 호출 시에는 ReferenceError 발생.
 */
 
 //  -------------------1.1.5 null -----------------------
@@ -104,10 +105,123 @@ var cost = 200,
     person = 3,
     value = 20;
 
-// 이렇게 한번에 선언 가능.
+// 이렇게 한번에 선언 가능. 마지막은 ;세미콜론 꼭 찍기.
 
 // 변수의 중복 선언이 가능한 대신, 기존의 변수값을 잃어버림.
 
 var x = 20;
 
 var x = 100; // 20값 손실.
+
+// 2.3 변수의 호이스팅
+
+
+// 중요한 것
+
+/*
+    NaN은 자기 자신과 일치하지 않는 유일한 값이다. 따라서 숫자가 NaN인지 조사하려면 빌트인 함수 isNaN을 사용한다.
+*/
+
+isNaN(NaN) // true
+
+
+// ===========================================================================
+// 강제적 타입 변환
+
+// 1. String 생성자 함수를 new 연산자 없이 호출하는 방법
+// 숫자 타입 => 문자열 타입
+console.log(String(1));        // "1"
+console.log(String(NaN));      // "NaN"
+console.log(String(Infinity)); // "Infinity"
+// 불리언 타입 => 문자열 타입
+console.log(String(true));     // "true"
+console.log(String(false));    // "false"
+
+// 2. Object.prototype.toString 메소드를 사용하는 방법
+// 숫자 타입 => 문자열 타입
+console.log((1).toString());        // "1"
+console.log((NaN).toString());      // "NaN"
+console.log((Infinity).toString()); // "Infinity"
+// 불리언 타입 => 문자열 타입
+console.log((true).toString());     // "true"
+console.log((false).toString());    // "false"
+
+// 3. 문자열 연결 연산자를 이용하는 방법
+// 숫자 타입 => 문자열 타입
+console.log(1 + '');        // "1"
+console.log(NaN + '');      // "NaN"
+console.log(Infinity + ''); // "Infinity"
+// 불리언 타입 => 문자열 타입
+console.log(true + '');     // "true"
+console.log(false + '');    // "false"
+
+
+// 1. Number 생성자 함수를 new 연산자 없이 호출하는 방법
+// 문자열 타입 => 숫자 타입
+console.log(Number('0'));     // 0
+console.log(Number('-1'));    // -1
+console.log(Number('10.53')); // 10.53
+// 불리언 타입 => 숫자 타입
+console.log(Number(true));    // 1
+console.log(Number(false));   // 0
+
+// 2. parseInt, parseFloat 함수를 사용하는 방법(문자열만 변환 가능)
+// 문자열 타입 => 숫자 타입
+console.log(parseInt('0'));       // 0
+console.log(parseInt('-1'));      // -1
+console.log(parseFloat('10.53')); // 10.53
+
+// 3. + 단항 연결 연산자를 이용하는 방법
+// 문자열 타입 => 숫자 타입
+console.log(+'0');     // 0
+console.log(+'-1');    // -1
+console.log(+'10.53'); // 10.53
+// 불리언 타입 => 숫자 타입
+console.log(+true);    // 1
+console.log(+false);   // 0
+
+// 4. * 산술 연산자를 이용하는 방법
+// 문자열 타입 => 숫자 타입
+console.log('0' * 1);     // 0
+console.log('-1' * 1);    // -1
+console.log('10.53' * 1); // 10.53
+// 불리언 타입 => 숫자 타입
+console.log(true * 1);    // 1
+console.log(false * 1);   // 0
+
+
+// 1. Boolean 생성자 함수를 new 연산자 없이 호출하는 방법
+// 문자열 타입 => 불리언 타입
+console.log(Boolean('x'));       // true
+console.log(Boolean(''));        // false
+console.log(Boolean('false'));   // true
+// 숫자 타입 => 불리언 타입
+console.log(Boolean(0));         // false
+console.log(Boolean(1));         // true
+console.log(Boolean(NaN));       // false
+console.log(Boolean(Infinity));  // true
+// null 타입 => 불리언 타입
+console.log(Boolean(null));      // false
+// undefined 타입 => 불리언 타 입
+console.log(Boolean(undefined)); // false
+// 객체 타입 => 불리언 타입
+console.log(Boolean({}));        // true
+console.log(Boolean([]));        // true
+
+// 2. ! 부정 논리 연산자를 두번 사용하는 방법
+// 문자열 타입 => 불리언 타입
+console.log(!!'x');       // true
+console.log(!!'');        // false
+console.log(!!'false');   // true
+// 숫자 타입 => 불리언 타입
+console.log(!!0);         // false
+console.log(!!1);         // true
+console.log(!!NaN);       // false
+console.log(!!Infinity);  // true
+// null 타입 => 불리언 타입
+console.log(!!null);      // false
+// undefined 타입 => 불리언 타입
+console.log(!!undefined); // false
+// 객체 타입 => 불리언 타입
+console.log(!!{});        // true
+console.log(!![]);        // true
