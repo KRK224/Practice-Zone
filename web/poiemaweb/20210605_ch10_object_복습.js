@@ -190,7 +190,7 @@ for(var idx in array){
 
 
 /*
-    for in은 객체의 프로퍼티 키를 순회하기 위한 문법!
+    for in은 객체의 모든 프로퍼티 키를 순회하기 위한 문법!
     배열에 사용하는 경우, 다른 프로퍼티가 있을 경우에는 다른 프로퍼티도 반환!!!!
 
     따라서, 배열에는 for of를 사용하자.
@@ -211,7 +211,7 @@ for (var prop in array){
 name: test array
 */
 
-// 배열에 for of 사용
+// 배열에 for of 사용 => 나중에 배열에서 더 자세히!
 
 const array = [1,2,3];
 array.name = "for of array";
@@ -235,4 +235,48 @@ for(const [index, value] of array.entries()){
 1 2
 2 3
 */
+
+
+
+// 4. Pass-by-reference
+
+/*
+ * object type을 객체 타입 또는 참조 타입이라 한다. 참조 타입이란 객체의 모든 연산이 실제 값이 아닌
+ * 참조값으로 처리됨을 의미한다.
+ * 원시 타입은 값이 한번 정해지면 변경할 수 없지만 (불변성 immutable), 객체는 프로퍼티를 변경, 추가 삭제가
+ * 가능하므로, 변경 가능(mutable)한 값이라 할 수 있다.
+ *  
+ * 따라서 객체 타입은 동적으로 변화할 수 있으므로 어느 정도의 메모리 공간을 확보해야 하는지 예측할 수 없기
+ * 때문에 런타임에 메모리 공간을 확보하고 메모리의 힙 영역(Heap Segment)에 저장된다.
+ */
+
+// pass-by-reference
+
+var foo = {
+    val: 10
+}
+
+var bar = foo;
+
+console.log(foo.val, bar.val); // 10 10
+console.log(foo === bar); // true
+
+bar.val = 20;
+
+console.log(foo.val, bar.val) // 20 20
+console.log(foo === bar) // true
+
+
+
+// 5. pass-by-value
+
+/**
+ * 원시 타입은 값(value)으로 전달된다. 즉, 값이 복사되어 전달된다. 이를 pass-by-value(값에 의한 전달)
+ * 이라 한다. 원시 타입은 값이 한번 정해지면 변경할 수 없다.(immutable).
+ * 
+ * 또한 이들 값은 런타임(변수 할당 시점)에 메모리의 스택 영역에 고정된 메모리 영역을 점유하고 저장된다.
+ * 
+ * => 아무튼 다 런타임에 메모리에 올라가네... C/C++은 아님.
+ */
+
 
