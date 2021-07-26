@@ -1,0 +1,25 @@
+div, span {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    background: yellow;
+}
+
+div#inline-block{
+    background-color: red;
+    display: inline-block;
+}
+
+div#inline {
+    background-color: aqua;
+    display: inline;
+}
+
+span#block {
+    background-color: Blue;
+    display: block;
+}
+
+span {
+    background: pink;
+}
