@@ -5,9 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/893b391123.js" crossorigin="anonymous"></script>
     <title>Nav bar</title>
+
+    <script>
+        window.onload = function () {
+            const hamburgers = document.querySelector('.hamburgers');
+            const navMenu = document.querySelector('.nav_menu');
+            const navLink = document.querySelector('.nav_link');
+            hamburgers.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navLink.classList.toggle('active');
+
+            });
+        }
+    </script>
 </head>
 <body>
-    
+    <nav class="nav_bar">
+        <ul class="nav_logo">
+            <li><i class="fas fa-holly-berry"></i></li>
+            <li>
+                <p>KRK224</p>
+            </li>
+        </ul>
+
+        <ul class="nav_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Bookings</a></li>
+        </ul>
+
+        <ul class="nav_link">
+            <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+
+        <div class="hamburgers">
+            <i class="fas fa-bars"></i>
+        </div>
+
+
+    </nav>
 </body>
 </html>
