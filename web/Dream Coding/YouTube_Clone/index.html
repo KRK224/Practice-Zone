@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/893b391123.js" crossorigin="anonymous">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Youtube Clone</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav_bar">
+            <div class="logo">
+              <span>
+                <i class="fas fa-bars"></i>
+              </span>
+              <a href='https://www.youtube.com/'>
+                <i class="fab fa-youtube"></i>
+                <span>YouTube<sup>KR</sup></span>
+              </a>
+
+                
+            </div>
+            <div class="nav_icons">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
+              <i class="fas fa-th"></i>
+              <i class="fas fa-bell"></i>
+              <img src="Logo/C-removebg-preview.png">
+            </div>
+        </nav>
+    </header>
+
+    <!-- 영상 재생 section -->
+    <section class="movie">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QXs9I0j1uuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+    </section>
+
+    <!-- 동영상 정보 Section -->
+    <section class="info">
+
+        <div class="hashtag">
+          <a href="https://www.youtube.com/hashtag/%ED%95%B4%EB%A6%AC%EC%95%88">#해리안</a>
+          <a href="https://www.youtube.com/hashtag/%EC%9C%A4%EC%86%8C%EC%95%88">#윤소안</a>
+          <a href="https://www.youtube.com/hashtag/%ED%94%8C%EB%A0%88%EC%9D%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8">#플레이리스트</a>
+        </div>
+
+        <div class="title">해리안 윤소안 플레이리스트 | Harryan Yoonsoan Playlist (2 hours)</div>
+
+        <div class="views_icons">
+            <span class="views">171K views</span>
+            <span class="response_icons">
+              <span><i class="fas fa-thumbs-up"></i> 3.9K</span>
+              <span><i class="fas fa-thumbs-down"></i> 28</span>
+              <span><i class="fas fa-share"></i> SHARE</span>
+              <span><i class="fab fa-stack-overflow"></i> Save</span>
+              <i class="fas fa-ellipsis-h"></i>
+            </span>
+        </div>
+
+
+        <div class="subscribe_info">
+            <div class="channel_info">
+              <a href="https://www.youtube.com/channel/UC3vFmScx0lZMPhOk0dI8Qlg" class="video_owner">
+                <img src="Logo/video_owner.jpg" alt="video_owner">
+              </a>
+              <a href="https://www.youtube.com/channel/UC3vFmScx0lZMPhOk0dI8Qlg" class="video_owner_str">
+                YOONSOAN 윤소안
+              </a>
+              <span class="subscribe_icon">
+                <button>SUBSCRIBED</button>
+                <i class="far fa-bell"></i>
+              </span>
+            </div>
+            <div class="info_showMore">
+                <p class="visible_info">
+                  많이 기다리셨지용 <br>
+                  <br>
+                  <a href="#">0:00</a> 해리안 윤소안 좀 늦으면 어때
+                  <button>SHOW MORE</button>
+                </p>
+                <div class="hidden_info"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 다음 재생 목록 -->
+    <section class="next_playlist">
+        <div class="btn_icons">
+          <button>All</button>
+          <button>Playlists</button>
+          <button>Related</button>
+          <button>Recently uploaded</button>
+        </div>
+        <div class="next_video">
+            <div class="1stNxtVideo">
+              <span class="thumbnail">
+
+                <i class="fas fa-clock"></i>
+                <i class="fas fa-stream"></i>
+              </span>
+              <span class="nxtVideoInfo">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+            <div class="2ndNxtVideo">
+              <span class="thumbnail">
+
+                <i class="fas fa-clock"></i>
+                <i class="fas fa-stream"></i>
+              </span>
+              <span class="nxtVideoInfo">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
