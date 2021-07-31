@@ -1,3 +1,134 @@
+:root {
+   /* Color */
+  --white-color: #fff;
+  --black-color: #030303;
+  --blue-color: #5c99e2;
+  --red-color: #ff0000;
+  --grey-dark-color: #606060;
+  --grey-medium-color: #909090;
+  --grey-light-color: #ececec;
+  --background-color: #f9f9f9;
+  
+   /* Size */
+  --padding: 12px;
+  --avartar-size: 36px;
+  --margin: 25px;
+  --margin-logo: 18px;
+
+   /* Font size */
+  --font-logo: 22px;
+  --font-img: 32px;
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body, html {
   font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 var(--padding);
+  background-color: var(--white-color);
+  color: var(--grey-dark-color);
+  font-size: var(--font-logo);
+}
+
+.nav_bar .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 var(--margin-logo);
+}
+
+.nav_bar .logo a {
+  margin-left: 32px;
+}
+
+.nav_bar .logo a {
+  text-decoration: none;
+    
+}
+
+.youtube-logo {
+  width: 120px;
+  height: 60px;
+}
+
+.nav_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav_icons ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_icons a, .nav_icons a:link, .nav_icons a:hover, .nav_icons a:visited {
+  text-decoration: none;
+  color: var(--grey-dark-color);
+}
+
+.nav_icons li {
+  margin: 0 var(--margin-logo);
+}
+
+
+
+.UserAccount{
+  width: var(--font-img);
+  padding: 0;
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  align-items: stretch;
+  height: 90%;
+}
+
+/* Moive section */
+.movie {
+  flex-basis: 35%;
+  text-align: center;
+  background-color: var(--black-color);
+  /* scrollbar시에 비디오 고정 */
+  position:sticky;
+  top: 0;
+  flex-grow: 1;
+}
+
+.movie iframe {
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.subscribe_info {
+  
 }
