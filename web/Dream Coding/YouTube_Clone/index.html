@@ -2,17 +2,18 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/893b391123.js" crossorigin="anonymous">
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <title>Youtube Clone</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/893b391123.js" crossorigin="anonymous">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Youtube Clone</title>
 </head>
+
 <body>
   <header>
     <nav class="nav_bar">
@@ -25,36 +26,36 @@
         </a>
       </div>
       <div class="nav_icons">
-        <ul>
-          <li><a href="#"><i class="fas fa-search"></i></a></li>
-          <li><a href="#"><i class="fas fa-microphone"></i></a></li>
-          <li><a href="#"><i class="fas fa-video"></i></a></li>
-          <li><a href="#"><i class="fas fa-th"></i></a></li>
-          <li><a href="#"><i class="fas fa-bell"></i></a></li>
-          <li><a href="#"><img src="Logo/C-removebg-preview.png" class="UserAccount"></a></li>
-        </ul>
-
+        <button><i class="fas fa-search"></i></button>
+        <button><i class="fas fa-microphone"></i></button>
+        <button><i class="fas fa-video"></i></button>
+        <button><i class="fas fa-th"></i></button>
+        <button><i class="fas fa-bell"></i></button>
+        <button><img src="Logo/C-removebg-preview.png" class="UserAccount"></button>
       </div>
     </nav>
   </header>
   <main>
-    <!-- 영상 재생 section -->
-    <section class="movie">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/QXs9I0j1uuo" title="YouTube video player"
+    
+    <section class="main_section">
+    <!-- 영상 재생 article -->
+    <article class="movie">
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/QXs9I0j1uuo" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-    </section>
+    </article>
 
-    <!-- 동영상 정보 Section -->
-    <section class="info">
+    <!-- 동영상 정보 article -->
+    <article class="info">
 
       <div class="hashtag">
         <ul>
           <li><a href="https://www.youtube.com/hashtag/%ED%95%B4%EB%A6%AC%EC%95%88">#해리안</a></li>
           <li><a href="https://www.youtube.com/hashtag/%EC%9C%A4%EC%86%8C%EC%95%88">#윤소안</a></li>
-          <li><a href="https://www.youtube.com/hashtag/%ED%94%8C%EB%A0%88%EC%9D%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8">#플레이리스트</a></li>
+          <li><a
+              href="https://www.youtube.com/hashtag/%ED%94%8C%EB%A0%88%EC%9D%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8">#플레이리스트</a>
+          </li>
         </ul>
-        
       </div>
 
       <div class="title">해리안 윤소안 플레이리스트 | Harryan Yoonsoan Playlist (2 hours)</div>
@@ -62,11 +63,11 @@
       <div class="views_icons">
         <span class="views">171K views</span>
         <span class="response_icons">
-          <span><i class="fas fa-thumbs-up"></i> 3.9K</span>
-          <span><i class="fas fa-thumbs-down"></i> 28</span>
-          <span><i class="fas fa-share"></i> SHARE</span>
-          <span><i class="fab fa-stack-overflow"></i> Save</span>
-          <i class="fas fa-ellipsis-h"></i>
+          <button><i class="fas fa-thumbs-up"></i> 3.9K</button>
+          <button><i class="fas fa-thumbs-down"></i> 28</button>
+          <button><i class="fas fa-share"></i> SHARE</button>
+          <button><i class="fab fa-stack-overflow"></i> Save</button>
+          <button><i class="fas fa-ellipsis-h"></i></button>
         </span>
       </div>
 
@@ -75,68 +76,98 @@
         <div class="channel_info">
           <a href="https://www.youtube.com/channel/UC3vFmScx0lZMPhOk0dI8Qlg" class="video_owner">
             <img src="Logo/video_owner.jpg" alt="video_owner">
-          </a>
-          <a href="https://www.youtube.com/channel/UC3vFmScx0lZMPhOk0dI8Qlg" class="video_owner_str">
-            YOONSOAN 윤소안
+            <span>YOONSOAN 윤소안</span>
           </a>
           <span class="subscribe_icon">
-            <button>SUBSCRIBED</button>
-            <i class="far fa-bell"></i>
+            <button class="text">SUBSCRIBED</button>
+            <button class="icon"><i class="far fa-bell"></i></button>
           </span>
         </div>
         <div class="info_showMore">
           <p class="visible_info">
             많이 기다리셨지용 <br>
             <br>
-            <a href="#">0:00</a> 해리안 윤소안 좀 늦으면 어때
+            <a href="#">0:00</a> 해리안 윤소안 좀 늦으면 어때<br>
             <button>SHOW MORE</button>
           </p>
           <div class="hidden_info"></div>
         </div>
       </div>
-    </section>
+    </article>
+  </section>
 
+  <aside>
     <!-- 다음 재생 목록 -->
     <section class="next_playlist">
       <div class="btn_icons">
         <button>All</button>
+        <button>From your search</button>
         <button>Playlists</button>
         <button>Related</button>
         <button>Recently uploaded</button>
       </div>
+
       <div class="next_video">
-        <li class="1st">
-          <div>
-            <span class="thumbnail">
-              <i class="fas fa-clock"></i>
-              <i class="fas fa-stream"></i>
-            </span>
-            <span class="nxtVideoInfo">
-              <button><i class="fas fa-ellipsis-v"></i></button>
-            </span>
-          </div>
-        </li>
-        <li class="2nd">
-          <div>
-            <span class="thumbnail">
-              <i class="fas fa-clock"></i>
-              <i class="fas fa-stream"></i>
-            </span>
-            <span class="nxtVideoInfo">
-              <button><i class="fas fa-ellipsis-v"></i></button>
-            </span>
-          </div>
-        </li>
+        <ul>
+          <li class="1st">
+            <a href="https://www.youtube.com/watch?v=oSnVp6zLi2M">
+              <div class="thumbnail_icons">
+                <img src="https://img.youtube.com/vi/oSnVp6zLi2M/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+              </div>
+              <div class="nextInfo">
+                <span class="nextTitle">
+                  해리안 Harryan Non stop Playlist
+                </span>
+                <span class="next_metadata">
+                  Voice Lyrics <br>
+                  235K views · 1 year ago
+                </span>
+              </div>
+            </a>
+            <button class="nextMoreBtn">hello</button>
+          </li>
 
-
+          <li class="2nd">
+            <a href="https://www.youtube.com/watch?v=DTYvG_9mVlQ">
+              <div class="thumbnail_icons">
+                <img src="https://img.youtube.com/vi/DTYvG_9mVlQ/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+              </div>
+              <div class="nextInfo">
+                <span class="nextTitle">
+                  ONEPICK | 아이유 IU, 취향의 발견 플레이리스트
+                </span>
+                <span class="next_metadata">
+                  취향의 발견 <br>
+                  1.1M views · 4 months ago
+                </span>
+              </div>
+            </a>
+            <button class="nextMoreBtn"></button>
+          </li>
+          <li class="3rd">
+            <a href="https://www.youtube.com/watch?v=5ePKBm4spBg">
+              <div class="thumbnail_icons">
+                <img src="https://img.youtube.com/vi/5ePKBm4spBg/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+              </div>
+              <div class="nextInfo">
+                <span class="nextTitle">
+                  [4K][Killing Voice] 권진아(KwonJinAh)의 킬링보이스-끝, Lonely Night, Fly Away, 씨스루, 여기까지, Knock, 위로, 운이좋았지,
+                  뭔가잘못됐어
+                </span>
+                <span class="next_metadata">
+                  딩고 뮤직 / dingo music <br>
+                  737K views · 4 days ago
+                </span>
+              </div>
+            </a>
+            <button class="nextMoreBtn"></button>
+          </li>
+        </ul>
       </div>
-
     </section>
+  </aside>
 
-
-
-  </main>
-
+</main>
 </body>
 
 </html>

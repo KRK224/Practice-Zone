@@ -8,10 +8,11 @@
   --grey-medium-color: #909090;
   --grey-light-color: #ececec;
   --background-color: #f9f9f9;
+  --grey-button-color: #e3e3e3;
   
    /* Size */
   --padding: 12px;
-  --avartar-size: 36px;
+  --avartar-size: 60px;
   --margin: 25px;
   --margin-logo: 18px;
 
@@ -31,9 +32,34 @@
 }
 
 body, html {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
+  font-family: Roboto;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-color: var(--background-color);
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height:90%;
+  padding: calc(var(--padding)*2);
+}
+
+button,
+button:focus { 
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;    
 }
 
 ul {
@@ -53,6 +79,10 @@ ul {
   font-size: var(--font-logo);
 }
 
+.nav_bar button {
+  font-size: var(--font-logo);
+}
+
 .nav_bar .logo {
   display: flex;
   align-items: center;
@@ -61,11 +91,6 @@ ul {
 
 .nav_bar .logo a {
   margin-left: 32px;
-}
-
-.nav_bar .logo a {
-  text-decoration: none;
-    
 }
 
 .youtube-logo {
@@ -86,37 +111,28 @@ ul {
   justify-content: space-between;
 }
 
-.nav_icons a, .nav_icons a:link, .nav_icons a:hover, .nav_icons a:visited {
+.nav_icons button{
   text-decoration: none;
   color: var(--grey-dark-color);
 }
 
-.nav_icons li {
+.nav_icons button {
   margin: 0 var(--margin-logo);
 }
-
-
 
 .UserAccount{
   width: var(--font-img);
   padding: 0;
 }
 
-/* main */
 
-main {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-color);
-  align-items: stretch;
-  height: 90%;
-}
 
 /* Moive section */
 .movie {
   flex-basis: 35%;
   text-align: center;
   background-color: var(--black-color);
+
   /* scrollbar시에 비디오 고정 */
   position:sticky;
   top: 0;
@@ -124,11 +140,185 @@ main {
 }
 
 .movie iframe {
-  height: 100%;
+  
   width: 100%;
   max-width: 1000px;
 }
 
-.subscribe_info {
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--margin);
+
+}
+
+.info .hashtag ul li{
+  display: inline-block;
+  margin-right: calc(var(--padding)/3);
+  font-size: var(--font-small);
+}
+
+.info .title {
+  font-size: calc(var(--font-large)*1.3);
+}
+
+.info .views_icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(var(--font-large));
+  align-items: center;
+  padding: var(--margin) 0;
+  border-bottom: solid 1px var(--grey-light-color);
+}
+
+.info .response_icons button{
+  margin-left: calc(var(--margin)*1.2);
+  color: var(--grey-medium-color);
+  font-size: calc(var(--font-logo)*0.9);
+}
+
+.info .subscribe_info {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin) 0;
+  border-bottom: solid 1px var(--grey-light-color);
+}
+
+.info .subscribe_info .channel_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
 }
+.info .subscribe_info .channel_info a {
+  display: flex;
+  align-items: center;
+}
+
+.info .subscribe_info .channel_info img {
+  width: var(--avartar-size);
+  height: var(--avartar-size);
+  border-radius: 50%;
+}
+
+.info .subscribe_info .channel_info span {
+  color: var(--black-color);
+  margin-left: var(--margin);
+  font-size: calc(var(--font-medium)*1.2);
+  font-weight: 600;
+}
+
+
+.info .subscribe_icon * {
+  font-size: calc(var(--font-medium)*1.2);
+  margin-right: calc(var(--margin)/2);
+}
+
+.info .subscribe_icon button.text{
+  background-color: var(--grey-light-color);
+  width: 130px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.info .subscribe_icon button.icon {
+  color : var(--grey-medium-color);
+  font-size: var(--font-logo);
+}
+
+.info .info_showMore {
+  font-size: calc(var(--font-medium)*1.2);
+  position:relative;
+  left: var(--avartar-size);
+  margin: var(--margin);
+}
+
+.info .info_showMore button {
+  font-size: var(--font-large);
+  margin-top: var(--margin);
+  font-weight: 500;
+}
+.next_playlist {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.next_playlist .btn_icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--margin);
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.next_playlist .btn_icons button {
+  margin-left: var(--margin);
+  font-size: calc(var(--font-medium));
+  font-weight: bold;
+  border: solid 1px var(--grey-light-color);
+  padding: var(--padding);
+  border-radius: 18px;
+  background-color: var(--grey-button-color);
+  overflow: hidden;
+  white-space: nowrap;
+  
+}
+
+.next_video ul li {
+  display:flex;
+}
+
+.next_video ul li a{
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 90%;
+}
+
+.next_video ul li a .thumbnail_icons img {
+  width: 200px;
+  margin: 0 var(--margin);
+}
+
+.next_video ul li a .nextInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.next_video ul li a .nextInfo .nextTitle {
+  font-size: var(--font-large);
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: calc(var(--margin)/3);
+}
+
+.next_video ul li a .nextInfo .next_metadata {
+  font-size: var(--font-medium)*2;
+  
+}
+
+.next_video ul li button {
+  visibility: hidden;
+}
+
+
+@media screen and (min-width: 768px) {
+  
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main .main_section {
+    flex: 1 1 60%;
+  }
+  main aside {
+    width: 250px;
+    flex: 1 0 30%;
+  }
+}
+
+
