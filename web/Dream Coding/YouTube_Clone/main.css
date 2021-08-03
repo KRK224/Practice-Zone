@@ -118,6 +118,10 @@ ul {
   margin: 0 var(--margin-logo);
 }
 
+.nav_icons{
+  position: relative;
+}
+
 .nav_icons .dropdown-content {
   display: none;
   font-size: var(--font-medium);
@@ -130,7 +134,7 @@ ul {
 
 .nav_icons .dropdown:hover .dropdown-content{
   display:block;
-  top: 70px;
+  top: 50px;
 }
 
 .UserAccount{
@@ -188,10 +192,37 @@ ul {
   justify-content: space-between;
   font-size: calc(var(--font-large));
   align-items: center;
-  padding: var(--margin) 0;
   border-bottom: solid 1px var(--grey-light-color);
+  padding: var(--margin) 0;
+  position: relative;
 }
 
+.info .views_icons button .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info .views_icons .active {
+  color: royalblue;
+}
+
+.info .views_icons .dropdown-content{
+  display: none;
+  font-size: var(--font-medium);
+  font-weight: bold;
+  background-color: var(--grey-dark-color);
+  color: white;
+  padding: var(--padding);
+  position: absolute;
+}
+
+
+.info .views_icons .dropdown:hover .dropdown-content {
+  display:block;
+  top: 60px;
+}
 .info .response_icons button{
   margin-left: calc(var(--margin)*1.2);
   color: var(--grey-medium-color);
