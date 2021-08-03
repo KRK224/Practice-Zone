@@ -48,7 +48,7 @@ main {
   flex-direction: column;
   align-items: stretch;
   height:90%;
-  padding: calc(var(--padding)*2);
+  padding: calc(var(--padding)*2) calc(var(--padding)*5);
 }
 
 button,
@@ -59,7 +59,8 @@ button:focus {
 }
 
 a {
-  text-decoration: none;    
+  text-decoration: none;
+  color: var(--black-color);
 }
 
 ul {
@@ -104,20 +105,32 @@ ul {
   justify-content: space-around;
 }
 
-.nav_icons ul {
+.nav_icons a {
   display: flex;
-  list-style: none;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  
 }
 
-.nav_icons button{
+.nav_icons a{
   text-decoration: none;
   color: var(--grey-dark-color);
+  margin: 0 var(--margin-logo);
 }
 
-.nav_icons button {
-  margin: 0 var(--margin-logo);
+.nav_icons .dropdown-content {
+  display: none;
+  font-size: var(--font-medium);
+  font-weight: bold;
+  background-color: var(--grey-dark-color);
+  color: white;
+  padding: var(--padding);
+  position: absolute;
+}
+
+.nav_icons .dropdown:hover .dropdown-content{
+  display:block;
+  top: 70px;
 }
 
 .UserAccount{
@@ -129,21 +142,29 @@ ul {
 
 /* Moive section */
 .movie {
-  flex-basis: 35%;
   text-align: center;
   background-color: var(--black-color);
-
-  /* scrollbar시에 비디오 고정 */
-  position:sticky;
-  top: 0;
-  flex-grow: 1;
-}
-
-.movie iframe {
-  
   width: 100%;
-  max-width: 1000px;
+  /* scrollbar시에 비디오 고정 */
+  /* position:sticky;
+  top: 0; */
 }
+
+.movie .iframebox {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top:56.25%;
+}
+
+.movie .iframebox iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
 
 .info {
   display: flex;
@@ -232,12 +253,17 @@ ul {
   left: var(--avartar-size);
   margin: var(--margin);
 }
+.info .info_showMore a {
+  color: blue;
+}
 
 .info .info_showMore button {
   font-size: var(--font-large);
   margin-top: var(--margin);
   font-weight: 500;
 }
+
+
 .next_playlist {
   display: flex;
   flex-direction: column;
@@ -297,6 +323,8 @@ ul {
 
 .next_video ul li a .nextInfo .next_metadata {
   font-size: var(--font-medium)*2;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   
 }
 
@@ -305,7 +333,7 @@ ul {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   
   main {
     display: flex;
@@ -313,11 +341,11 @@ ul {
   }
 
   main .main_section {
-    flex: 1 1 60%;
+    flex: 1 1 65%;
   }
   main aside {
     width: 250px;
-    flex: 1 0 30%;
+    flex: 1 0 35%;
   }
 }
 

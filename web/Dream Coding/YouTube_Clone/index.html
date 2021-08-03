@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
+  <script type="text/javascript" src="./mainjs.js"></script>
   <title>Youtube Clone</title>
 </head>
 
@@ -25,13 +26,39 @@
           <img class="youtube-logo" src="Logo/YouTube-Logo.png" alt="YouTube-Logo">
         </a>
       </div>
+
       <div class="nav_icons">
-        <button><i class="fas fa-search"></i></button>
-        <button><i class="fas fa-microphone"></i></button>
-        <button><i class="fas fa-video"></i></button>
-        <button><i class="fas fa-th"></i></button>
-        <button><i class="fas fa-bell"></i></button>
-        <button><img src="Logo/C-removebg-preview.png" class="UserAccount"></button>
+        <a href="#" class="dropdown">
+          <i class="fas fa-search"></i>
+          <div class="dropdown-content">
+            Search
+          </div>
+        </a>
+        <a href="#" class="dropdown">
+          <i class="fas fa-microphone"></i>
+          <div class="dropdown-content">
+            Search with your voice
+          </div>
+        </a>
+        <a href="#" class="dropdown">
+          <i class="fas fa-video"></i>
+          <div class="dropdown-content">
+            Create
+          </div>
+        </a>
+        <a href="#" class="dropdown">
+          <i class="fas fa-th"></i>
+          <div class="dropdown-content">
+            YouTubes apps
+          </div>
+        </a>
+        <a href="#" class="dropdown">
+          <i class="fas fa-bell"></i>
+          <div class="dropdown-content">
+            Notifications
+          </div>
+        </a>
+        <a href="#"><img src="Logo/C-removebg-preview.png" class="UserAccount"></a>
       </div>
     </nav>
   </header>
@@ -40,9 +67,11 @@
     <section class="main_section">
     <!-- 영상 재생 article -->
     <article class="movie">
-      <iframe width="560" height="500" src="https://www.youtube.com/embed/QXs9I0j1uuo" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="iframebox">
+        <iframe width='100%' height="auto" src="https://www.youtube.com/embed/QXs9I0j1uuo" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </article>
 
     <!-- 동영상 정보 article -->
