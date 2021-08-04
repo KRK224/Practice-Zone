@@ -1,0 +1,13 @@
+table, tr, th, td  {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1px;
+}
+
+#address {
+  width: 15rem;
+}
+
