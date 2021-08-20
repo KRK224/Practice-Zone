@@ -28,15 +28,26 @@
       </div>
 
       <div class="searchBar">
-        <form>
-          <div class="textSearch">
-            <input type="text" placeholder="검색" id="search">
-            <span class = searchBarSearch><i class="fas fa-search"></i></span>
+        <form action="#">
+          <div class="searchWrapper">
+            <div class="textSearch">
+              <input type="text" placeholder="검색" id="search">
+              <a class="searchBarSearch dropdown">
+                <i class="fas fa-search"></i>
+                <div class="dropdown-content">
+                  Search
+                </div>
+              </a>
+            </div>
+            <div class="voiceSearch">
+              <a class="searchBarMic dropdown">
+                <i class="fas fa-microphone"></i>
+                <div class="dropdown-content">
+                  Search with your voice
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="voiceSearch"></div>
-            <span class = searchBarMic><i class="fas fa-microphone"></i></span>
-          </div>
-            
         </form>
       </div>
 
@@ -74,9 +85,9 @@
         </a>
         <a href="#"><img src="Logo/C-removebg-preview.png" class="UserAccount"></a>
       </div>
-
     </nav>
   </header>
+
   <main>
 
     <section class="main_section">
@@ -109,16 +120,16 @@
           <span class="views">171K views · Apr 1, 2021</span>
           <span class="response_icons">
             <span class="thumbsIcons">
-              <button class="dropdown">
-                <span class="liked">
+              <button class="dropdown liked">
+                <span>
                   <i class="fas fa-thumbs-up"></i> 3.9K
                 </span>
                 <div class="dropdown-content">
                   I like this
                 </div>
               </button>
-              <button class="dropdown">
-                <span class="disliked">
+              <button class="dropdown disliked">
+                <span>
                   <i class="fas fa-thumbs-down"></i> 28
                 </span>
                 <div class="dropdown-content">
@@ -126,6 +137,7 @@
                 </div>
               </button>
             </span>
+
             <button class="dropdown">
               <span>
                 <i class="fas fa-share"></i> SHARE
@@ -165,7 +177,7 @@
               <a href="#">0:00</a> 해리안 윤소안 좀 늦으면 어때<br>
               <button>SHOW MORE</button>
             </p>
-            <div class="hidden_info"></div>
+            <!-- <div class="hidden_info"></div> -->
           </div>
         </div>
       </article>
@@ -221,7 +233,7 @@
                   </span>
                 </div>
                 <button class="nextMoreBtn"><i class="fas fa-ellipsis-v"></i></button>
-              </a>              
+              </a>
             </li>
 
             <li class="3rd">
@@ -242,12 +254,12 @@
                   </span>
                 </div>
                 <button class="nextMoreBtn"><i class="fas fa-ellipsis-v"></i></button>
-              </a>              
+              </a>
             </li>
-
           </ul>
         </div>
       </section>
+      
     </aside>
 
   </main>

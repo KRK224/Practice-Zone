@@ -41,16 +41,6 @@ body, html {
   background-color: var(--background-color);
 }
 
-/* main */
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height:90%;
-  padding: calc(var(--padding)*2) calc(var(--padding)*5);
-}
-
 button,
 button:focus { 
   border: none;
@@ -126,7 +116,7 @@ ul {
   position: relative;
 }
 
-.nav_icons .dropdown-content {
+header .dropdown-content {
   display: none;
   font-size: var(--font-medium);
   font-weight: bold;
@@ -136,14 +126,26 @@ ul {
   position: absolute;
 }
 
-.nav_icons .dropdown:hover .dropdown-content{
+header .dropdown:hover .dropdown-content{
   display:block;
   top: 50px;
+  z-index: 1000;
+  white-space: nowrap;
 }
 
 .UserAccount{
   width: var(--font-img);
   padding: 0;
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height:90%;
+  padding: calc(var(--padding)*2) calc(var(--padding)*5);
 }
 
 
@@ -299,10 +301,11 @@ ul {
 }
 
 
-.next_playlist {
+aside .next_playlist {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 .next_playlist .btn_icons {
@@ -410,30 +413,108 @@ ul {
 
 @media screen and (min-width: 1000px) {
   
+  header .nav_bar .log {
+    flex: 0 0 auto;
+  }
+
+  header .nav_bar .nav_icons {
+    flex: 0 0 auto;
+  }
+
   header .nav_bar .searchBar{
-    display: block;  
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-self: stretch;
   }
 
   header .nav_bar .searchBar form {
+    width: 100%;
+    align-self: center;
+  }
+
+  header .nav_bar .searchBar form .searchWrapper{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  header .nav_bar .searchBar .textSearch {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    margin: 0 0 0 40px;
+    padding: 0 4px;
+    max-width: 600px;
+  }
+
+  header .nav_bar .searchBar #search {
+    width: 100%;
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    box-shadow: inset 0 1px 2px #eee;
+    color: hsl(0deg 0% 7%);
+    flex: 1 1 auto;
+  }
+
+  header .nav_bar .searchBar #search:focus {
+    border-right: solid;
+    border-collapse:collapse;
+    border-width: 1.2px;
+  }
+
+  header .nav_bar .searchBar .searchBarSearch {
+    flex: 1 0 auto;
+    width: 65px;
+    padding: 1px 6px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+  }
+
+  header .nav_bar .searchBar .searchBarSearch:hover {
+    background-color:#f0f0f0;
+  }
+
+  header .nav_bar .searchBar .voiceSearch {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  header .nav_icons a:nth-child(1) {
+    display: none;
+  }
+  header .nav_icons a:nth-child(2) {
+    display: none;
   }
 
   main {
     display: flex;
     flex-direction: row;
+    
   }
 
   main .main_section {
-    flex: 1 1 65%;
+    flex: 3 1 70%;
     margin-right: var(--margin);
-  }
-  main aside {
-    width: 230px;
-    flex: 1 0 35%;
+    min-width:660px;
   }
 
-  
+  main aside {
+    display:flex;
+    flex: 1 2 25%;
+    flex-direction: column;
+    max-width: 30%;
+  }
 
 }
 
