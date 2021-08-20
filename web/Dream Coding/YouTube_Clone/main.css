@@ -99,6 +99,10 @@ ul {
   height: 60px;
 }
 
+.nav_bar .searchBar {
+  display: none;
+}
+
 .nav_icons {
   display: flex;
   align-items: center;
@@ -310,7 +314,7 @@ ul {
 }
 
 .next_playlist .btn_icons button {
-  margin-left: var(--margin);
+  margin-right: var(--margin);
   font-size: calc(var(--font-medium));
   font-weight: bold;
   border: solid 1px var(--grey-light-color);
@@ -329,21 +333,29 @@ ul {
 .next_video ul li a{
   display: flex;
   flex-direction: row;
-  flex: 1 1 90%;
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.next_video ul li a .thumbnail_icons {
+  position: relative;
 }
 
 .next_video ul li a .thumbnail_icons img {
   width: 200px;
-  margin: 0 var(--margin);
+  margin: 0;
 }
 
 .next_video ul li a .nextInfo {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  padding: 0 var(--padding);
+  margin-right: calc(var(--margin)*0.8);
 }
 
 .next_video ul li a .nextInfo .nextTitle {
-  font-size: var(--font-large);
+  font-size: calc(var(--font-large)*0.95);
   font-weight: bold;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -359,13 +371,54 @@ ul {
   
 }
 
+
 .next_video ul li button {
   visibility: hidden;
+  position: absolute;
 }
 
+.next_video ul li a:hover .watchIcon {
+  visibility: visible;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  top: 0;
+  left: 165px;
+  margin: 5px;
+}
+
+.next_video ul li a:hover .listsIcon {
+  visibility: visible;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  top: 30px;
+  left: 165px;
+  margin: 5px;
+}
+
+.next_video ul li a:hover .nextMoreBtn {
+  visibility: visible;
+  width: 25px;
+  top: 0;
+  right: 0;
+  color: grey;
+
+}
 
 @media screen and (min-width: 1000px) {
   
+  header .nav_bar .searchBar{
+    display: block;  
+  }
+
+  header .nav_bar .searchBar form {
+    display: flex;
+    
+  }
+
   main {
     display: flex;
     flex-direction: row;
@@ -373,11 +426,15 @@ ul {
 
   main .main_section {
     flex: 1 1 65%;
+    margin-right: var(--margin);
   }
   main aside {
-    width: 250px;
+    width: 230px;
     flex: 1 0 35%;
   }
+
+  
+
 }
 
 

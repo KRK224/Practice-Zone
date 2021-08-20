@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="mainjs.js"></script>
+  <script type="module" src="mainjs.js"></script>
   <title>Youtube Clone</title>
 </head>
 
@@ -19,13 +19,27 @@
   <header>
     <nav class="nav_bar">
       <div class="logo">
-        <span>
+        <button>
           <i class="fas fa-bars"></i>
-        </span>
+        </button>
         <a href='https://www.youtube.com/'>
           <img class="youtube-logo" src="Logo/YouTube-Logo.png" alt="YouTube-Logo">
         </a>
       </div>
+
+      <div class="searchBar">
+        <form>
+          <div class="textSearch">
+            <input type="text" placeholder="검색" id="search">
+            <span class = searchBarSearch><i class="fas fa-search"></i></span>
+          </div>
+          <div class="voiceSearch"></div>
+            <span class = searchBarMic><i class="fas fa-microphone"></i></span>
+          </div>
+            
+        </form>
+      </div>
+
 
       <div class="nav_icons">
         <a href="#" class="dropdown">
@@ -60,6 +74,7 @@
         </a>
         <a href="#"><img src="Logo/C-removebg-preview.png" class="UserAccount"></a>
       </div>
+
     </nav>
   </header>
   <main>
@@ -173,6 +188,8 @@
               <a href="https://www.youtube.com/watch?v=oSnVp6zLi2M">
                 <div class="thumbnail_icons">
                   <img src="https://img.youtube.com/vi/oSnVp6zLi2M/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+                  <button class="watchIcon"><i class="far fa-clock"></i></button>
+                  <button class="listsIcon"><i class="fas fa-stream"></i></button>
                 </div>
                 <div class="nextInfo">
                   <span class="nextTitle">
@@ -183,14 +200,16 @@
                     235K views · 1 year ago
                   </span>
                 </div>
+                <button class="nextMoreBtn"><i class="fas fa-ellipsis-v"></i></button>
               </a>
-              <button class="nextMoreBtn">hello</button>
             </li>
 
             <li class="2nd">
               <a href="https://www.youtube.com/watch?v=DTYvG_9mVlQ">
                 <div class="thumbnail_icons">
                   <img src="https://img.youtube.com/vi/DTYvG_9mVlQ/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+                  <button class="watchIcon"><i class="far fa-clock"></i></button>
+                  <button class="listsIcon"><i class="fas fa-stream"></i></button>
                 </div>
                 <div class="nextInfo">
                   <span class="nextTitle">
@@ -201,13 +220,16 @@
                     1.1M views · 4 months ago
                   </span>
                 </div>
-              </a>
-              <button class="nextMoreBtn"></button>
+                <button class="nextMoreBtn"><i class="fas fa-ellipsis-v"></i></button>
+              </a>              
             </li>
+
             <li class="3rd">
               <a href="https://www.youtube.com/watch?v=5ePKBm4spBg">
                 <div class="thumbnail_icons">
                   <img src="https://img.youtube.com/vi/5ePKBm4spBg/mqdefault.jpg" alt="thumbnail" class="thumbnail">
+                  <button class="watchIcon"><i class="far fa-clock"></i></button>
+                  <button class="listsIcon"><i class="fas fa-stream"></i></button>
                 </div>
                 <div class="nextInfo">
                   <span class="nextTitle">
@@ -219,9 +241,10 @@
                     737K views · 4 days ago
                   </span>
                 </div>
-              </a>
-              <button class="nextMoreBtn"></button>
+                <button class="nextMoreBtn"><i class="fas fa-ellipsis-v"></i></button>
+              </a>              
             </li>
+
           </ul>
         </div>
       </section>
