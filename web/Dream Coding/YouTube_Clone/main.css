@@ -301,6 +301,7 @@ main {
 }
 
 
+
 aside .next_playlist {
   display: flex;
   flex-direction: column;
@@ -308,25 +309,68 @@ aside .next_playlist {
   width: 100%;
 }
 
-.next_playlist .btn_icons {
-  display: flex;
-  justify-content: flex-start;
+.next_playlist .mySwiper {
   margin-bottom: var(--margin);
-  flex-wrap: nowrap;
-  overflow-x: hidden;
 }
+
+.next_playlist .swiper-wrapper {
+  width: 50%;
+  
+}
+
+.next_playlist .swiper-slide {
+  display: flex;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  /* margin-bottom: var(--margin);
+  flex-wrap: nowrap;
+  overflow-x: hidden; */
+  z-index: 1;
+  
+}
+
+.next_playlist .swiper-button-next {
+  background-image: url("./Logo/chevron_right.png");
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  background-position: center;
+  color: black;
+  z-index: 10;
+}
+
+.next_playlist .swiper-button-next::after {
+  display:none;
+}
+
+.next_playlist .swiper-button-prev {
+  background-image: url("./Logo/chevron_left.png");
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  background-position: center;
+
+  color: black;
+  z-index: 10;
+}
+
+.next_playlist .swiper-button-prev::after {
+  display:none;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
 
 .next_playlist .btn_icons button {
   margin-right: var(--margin);
-  font-size: calc(var(--font-medium));
+  font-size: calc(var(--font-medium)*0.9);
   font-weight: bold;
   border: solid 1px var(--grey-light-color);
   padding: var(--padding);
   border-radius: 18px;
-  background-color: var(--grey-button-color);
-  overflow: hidden;
-  white-space: nowrap;
-  
+  background-color: var(--grey-button-color);  
 }
 
 .next_video ul li {
@@ -410,6 +454,9 @@ aside .next_playlist {
   color: grey;
 
 }
+
+
+
 
 @media screen and (min-width: 1000px) {
   

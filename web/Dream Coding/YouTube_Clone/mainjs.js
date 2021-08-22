@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function() {  
   const likeBtn = document.querySelector('.liked');
   const dislikeBtn = document.querySelector ('.disliked');
   const thumbsIconsSpan = document.querySelector('.thumbsIcons');
